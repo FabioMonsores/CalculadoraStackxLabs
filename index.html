@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="img/calculator-icon.png">
+</head>
+
+<body>
+  <div class="container">
+    <div class="visorHistorico">
+      <input type="text" id="input" placeholder="0" disabled>
+      <input type="text" id="output" placeholder="0" disabled="true">
+
+      <div class="botoes">
+        <button class="botaoCinza">7</button>
+        <button class="botaoCinza">8</button>
+        <button class="botaoCinza">9</button>
+        <button>*</button>
+        <button>+</button>
+
+        <button class="botaoCinza">4</button>
+        <button class="botaoCinza">5</button>
+        <button class="botaoCinza">6</button>
+        <button>/</button>
+        <button>-</button>
+
+        <button class="botaoCinza">1</button>
+        <button class="botaoCinza">2</button>
+        <button class="botaoCinza" class="botaoCinza">3</button>
+        <button>(</button>
+        <button>)</button>
+
+        <button class="botaoCinza">0</button>
+        <button class="botaoCinza">.</button>
+        <button class="botaoLaranja">=</button>
+        <button>CLEAR</button>
+        <button>DEL</button>
+      </div>
+    </div>
+
+    <div class="historico">
+      <h4>HISTÓRICO</h4>
+      <div class="containerHistorico"></div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
