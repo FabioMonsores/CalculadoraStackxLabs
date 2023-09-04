@@ -1,155 +1,98 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-#input,
-#output {
-  padding: 0.5em;
-  font-family: "Ubuntu Mono", monospace;
-}
-
-#input {
-  color: #f05f1c;
-}
-
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #f05f1c;
-  opacity: 1; /* Firefox */
-  font-family: "Ubuntu Mono", monospace;
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #f05f1c;
-  font-family: "Ubuntu Mono", monospace;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #f05f1c;
-  font-family: "Ubuntu Mono", monospace;
-}
-
-#output {
-  text-align: right;
-  background-color: rgb(30, 30, 30);
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-h6 {
-  margin: 0;
-}
-
 body {
-  font-family: "Poppins", sans-serif;
-  font-size: 200%;
+  width: 100%;
   height: 100vh;
-  margin: 0;
-  background-color: rgb(46, 46, 46);
-  color: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  overflow: none;
+  align-items: center;
+  background-color: #4d2b6d;
 }
 
-.container {
-  overflow: none;
-  width: 80vw;
-  height: 50vh;
-  display: grid;
-  grid-template-columns: 1fr 250px;
-}
-
-.visorHistorico {
-  display: flex;
-  flex-direction: column;
-}
-
-.historico {
-  background-color: rgb(50, 50, 50);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.historico h4 {
-  padding: 0.5em;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-}
-
-.containerHistorico {
-  flex-grow: 1;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-button,
-input {
-  font: inherit;
-  color: inherit;
-  background-color: inherit;
+button {
+  padding: 5px;
+  margin: 2px;
   border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 15pt;
+  font-family: "poppins";
+  font-weight: bolder;
+}
+
+button:hover {
+  background-color: blueviolet;
+  color: white;
 }
 
 .botoes {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  flex-grow: 1;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 300px;
+  height: 250px;
 }
 
-.botoes button {
-  border: 1px solid rgb(60, 60, 60);
-  cursor: pointer;
+#equal-btn {
+  grid-column: 3 / span 2;
+  background-color: blueviolet;
+  color: white;
 }
 
-button:hover {
-  background-color: #f05f1c;
-  color: #343434;
+#equal-btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: blueviolet;
 }
 
-.botaoLaranja {
-  background-color: rgb(240, 95, 28);
+#container {
+  background-color: rgba(255, 255, 255, 0.322);
+  margin-left: 50%;
+  width: 300px;
+  border: 3px solid;
+  border-radius: 10px;
+  border-color: #cd99fd;
+  padding: 10px;
+  height: 330px;
+  position: absolute;
 }
 
-.botaoCinza {
-  background-color: rgba(231, 229, 229, 0.2);
-}
-
-.historyItem {
-  border-bottom: 1px solid rgb(100, 100, 100);
-  padding-left: 1em;
-  padding-right: 1em;
-  color: rgb(128, 128, 128);
-  font-size: 60%;
-}
-
-.historyItem > *:first-child {
-  padding-top: 0.5em;
-}
-
-.historyItem > *:last-child {
+#visor {
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.397);
+  border: 2px solid;
+  border-radius: 10px;
+  border-color: #cd99fd;
+  width: 300px;
+  height: 65px;
+  font-family: "Ubuntu", monospace;
+  font-size: 50px;
   text-align: right;
+  padding-right: 8px;
 }
 
-::-webkit-scrollbar {
-  background-color: transparent;
+/*Histórico*/
+#historico {
+  font-family: "Poppins";
+  margin-left: 2%;
+  margin-top: 50px;
+  font-size: 30px;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #cd99fd;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #323232;
-  transition: background-color 0.3s ease;
-}
-
-@media screen and (max-width: 700px) {
-  .historico {
-    display: none;
-  }
-  .container {
-    grid-template-columns: 1fr;
-  }
+h3 {
+  font-size: 25pt;
+  font-family: "Poppins";
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-top: -10px;
 }
