@@ -36,13 +36,39 @@ button:hover {
 
 .botoes {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   width: 300px;
   height: 250px;
 }
 
+.container-calc {
+  display: flex;
+  flex-direction: column;
+  gap: -25px;
+}
+
+.operacao {
+  background-color: #eb0f8f;
+  color: white;
+}
+
+.operacao:hover {
+  background-color: #ffffff;
+  color: #eb0f8f;
+}
+
+.clean {
+  background-color: rgb(231, 112, 14);
+  color: white;
+}
+
+.clean:hover {
+  background-color: white;
+  color: rgb(231, 112, 14);
+}
+
 #equal-btn {
-  grid-column: 3 / span 2;
+  grid-column: 2 / 6;
   background-color: blueviolet;
   color: white;
 }
@@ -54,7 +80,7 @@ button:hover {
 
 #container {
   background-color: rgba(255, 255, 255, 0.322);
-  margin-left: 50%;
+  margin-left: 310px;
   width: 300px;
   border: 3px solid;
   border-radius: 10px;
@@ -80,13 +106,13 @@ button:hover {
 
 /*Histórico*/
 #historico {
-  font-family: "Poppins";
+  font-family: "Ubuntu", monospace;
   margin-left: 2%;
   margin-top: 50px;
-  font-size: 30px;
+  font-size: 13pt;
   cursor: pointer;
   text-decoration: underline;
-  color: #cd99fd;
+  color: #ffffff;
 }
 
 h3 {

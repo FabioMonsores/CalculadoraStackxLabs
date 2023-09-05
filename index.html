@@ -12,39 +12,39 @@
 
 <body>
 
-  <div class="container">
+  <div class="container-calc">
     <div id="visor"></div>
     <div class="botoes">
-      <button>CE</button>
-      <button>C</button>
-      <button>DEL</button>
-      <button>&divide;</button>
+      <!-- <button>CE</button> -->
+      <button onclick="clean()" class="clean">C</button>
+      <!-- <button>DEL</button> -->
+      <button onclick="operacao ('/')" class="operacao">&divide;</button>
+      <button onclick="operacao ('*')" class="operacao">&times;</button>
+      <button onclick="operacao ('-')" class="operacao">-</button>
+      <button onclick="operacao ('+')" class="operacao">+</button>
 
-      <button class="numero">7</button>
-      <button class="numero">8</button>
-      <button class="numero">9</button>
-      <button>&times;</button>
+      <button onclick="number('1')">1</button>
+      <button onclick="number('2')">2</button>
+      <button onclick="number('3')">3</button>
+      <button onclick="number('4')">4</button>
+      <button onclick="number('5')">5</button>
+      <button onclick="number('6')">6</button>
+      <button onclick="number('7')">7</button>
+      <button onclick="number('8')">8</button>
+      <button onclick="number('9')">9</button>
+      <button onclick="number('0')">0</button>
 
-      <button class="numero">4</button>
-      <button class="numero">5</button>
-      <button class="numero">6</button>
-      <button>-</button>
+      <button onclick="number('.')" class="operacao">.</button>
+      <button onclick="resultado()" id="equal-btn">=</button>
+    </div>
 
-      <button class="numero">1</button>
-      <button class="numero">2</button>
-      <button class="numero">3</button>
-      <button>+</button>
-
-      <button class="numero">0</button>
-      <button>.</button>
-      <button id="equal-btn">=</button>
+    <div id="container" class="inlineBlock">
+      <h3>Histórico</h3>
+      <div id="historico"></div>
     </div>
   </div>
 
-  <div id="container" class="inlineBlock">
-    <h3>Histórico</h3>
-    <div id="historico"></div>
-  </div>
+
 
 </body>
 
